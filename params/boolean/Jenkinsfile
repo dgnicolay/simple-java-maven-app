@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    
+    parameters{
+        booleanParam(defaultValue: false, description: "some text description", name: "var" )
+    }
+
+    stages{
+        stage("Demo"){
+            steps{
+                echo "var is : ${params.var}"
+            }
+        }
+    }
+
+}
